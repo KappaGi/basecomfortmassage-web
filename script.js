@@ -1,8 +1,7 @@
-// Scroll behavior for reviews bar and navbar
+// Scroll behavior for navbar
 let lastScrollTop = 0;
 let scrolledPastHero = false;
 
-const reviewsBar = document.getElementById('reviewsBar');
 const navbar = document.getElementById('navbar');
 const scrollingText = document.getElementById('scrollingText');
 const logoImg = document.getElementById('logoImg');
@@ -50,9 +49,8 @@ function toggleMenu() {
         document.body.style.overflow = 'hidden';
         document.body.style.touchAction = 'none';
 
-        // Keep navbar and reviews bar states frozen
+        // Keep navbar state frozen
         if (scrollPosition > 10) {
-            reviewsBar.classList.add('frozen');
             navbar.classList.add('frozen');
         }
 
@@ -64,8 +62,7 @@ function toggleMenu() {
         document.body.style.overflow = '';
         document.body.style.touchAction = '';
 
-        // Remove frozen classes
-        reviewsBar.classList.remove('frozen');
+        // Remove frozen class
         navbar.classList.remove('frozen');
 
         // Remove event listeners
@@ -101,13 +98,6 @@ window.addEventListener('scroll', () => {
     if (isMassagesPage) {
         // === MASSAGES PAGE BEHAVIOR ===
 
-        // Hide reviews bar on any scroll down from top
-        if (scrollTop > 10) {
-            reviewsBar.classList.add('hidden');
-        } else {
-            reviewsBar.classList.remove('hidden');
-        }
-
         // Add background to navbar when scrolled past initial position
         if (scrollTop > 10) {
             navbar.classList.add('scrolled');
@@ -125,13 +115,6 @@ window.addEventListener('scroll', () => {
         }
     } else {
         // === HOME PAGE BEHAVIOR (original) ===
-
-        // Hide reviews bar on any scroll down from top
-        if (scrollTop > 10) {
-            reviewsBar.classList.add('hidden');
-        } else {
-            reviewsBar.classList.remove('hidden');
-        }
 
         // Add background to navbar when scrolled past initial position
         if (scrollTop > 10) {
