@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="description" content="Base Comfort Massage - Our Massage Services">
     <title>Our Massages - Base Comfort Massage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,46 +25,58 @@
                         'serif': ['Georgia', 'Palatino', 'serif'],
                         'sans': ['Open Sans', 'sans-serif'],
                     },
+                    screens: {
+                        'custom': '1815px',
+                    },
                 }
             }
         }
     </script>
-    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="custom.css?v=6">
 </head>
 <body class="massages-page font-serif bg-base-cream text-base-text leading-relaxed overflow-x-hidden min-h-screen">
-    <!-- Section 1: Reviews Bar -->
-    <div class="reviews-bar fixed top-0 left-0 right-0 z-[1000] bg-base-gray border-b border-base-gold py-1.5 px-5 transition-transform duration-300" id="reviewsBar">
-        <div class="flex justify-center items-center gap-12 max-w-7xl mx-auto">
-            <div class="desktop-only hidden md:flex text-sm items-center gap-2">Location in Utrecht</div>
-            <div class="desktop-only hidden md:flex text-sm items-center gap-2">Licensed masseur</div>
-            <div class="flex text-sm items-center gap-2">
-                <span class="text-base-gold text-sm">★★★★★</span>
-                <span>150+ reviews</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Section 2: Navigation Bar -->
-    <nav class="navbar fixed top-[45px] left-0 right-0 z-[1001] py-1.5 px-12 transition-all duration-300" id="navbar">
-        <div class="flex justify-between items-center max-w-7xl mx-auto">
-            <div class="flex gap-7 items-center flex-1">
-                <button class="hamburger hidden flex-col justify-between w-7 h-[18px] bg-transparent border-0 cursor-pointer p-0 z-[1002] relative" id="hamburger">
+    <!-- Section 1: Navigation Bar -->
+    <nav class="navbar fixed top-0 left-0 right-0 z-[1001] py-1.5 px-5 md:px-12 xl:py-2 2xl:py-2.5 xl:px-16 2xl:px-20 transition-all duration-300" id="navbar">
+        <div class="relative flex justify-between items-center max-w-7xl xl:max-w-[90rem] 2xl:max-w-[110rem] mx-auto">
+            <!-- Mobile: Hamburger only -->
+            <div class="flex md:hidden items-center">
+                <button class="hamburger flex flex-col justify-between w-7 h-[18px] bg-transparent border-0 cursor-pointer p-0 z-[1002] relative" id="hamburger">
                     <span class="hamburger-line w-full h-0.5 bg-base-tan transition-all duration-300"></span>
                     <span class="hamburger-line w-full h-0.5 bg-base-tan transition-all duration-300"></span>
                 </button>
-                <a href="massages.html" class="desktop-nav active hidden md:block text-base-tan no-underline text-sm transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Massages</a>
-                <a href="index.html#gift" class="desktop-nav hidden md:block text-base-tan no-underline text-sm transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Gift cards</a>
-                <a href="index.html#about" class="desktop-nav hidden md:block text-base-tan no-underline text-sm transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">About us</a>
-                <a href="#contact" class="desktop-nav hidden md:block text-base-tan no-underline text-sm transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Chat via WhatsApp</a>
             </div>
-            <div class="flex justify-center flex-1">
+
+            <!-- Desktop: Logo on the left -->
+            <div class="hidden md:flex items-center">
                 <a href="index.html">
-                    <img src="assets/icon_base_gpt.png" alt="Base Comfort" class="logo h-[70px] w-auto transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle" id="logoImg">
+                    <img src="assets/logo_base_new_round.png" alt="Base Comfort" class="logo h-[70px] xl:h-[85px] 2xl:h-[100px] w-auto transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle" id="logoImg">
                 </a>
             </div>
-            <div class="flex gap-7 items-center flex-1 justify-end">
-                <button class="btn-nav desktop-nav hidden md:block bg-transparent border border-base-tan text-base-tan py-3 px-7 rounded-full cursor-pointer text-sm italic font-serif transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-olive hover:text-white hover:border-base-olive hover:-rotate-[5deg]">Contact</button>
-                <button class="btn-primary bg-base-olive border border-base-olive text-white py-3 px-7 rounded-full text-sm italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold hover:-rotate-[5deg]">Book Now</button>
+
+            <!-- Mobile: Logo centered -->
+            <div class="flex md:hidden justify-center flex-1">
+                <a href="index.html">
+                    <img src="assets/logo_base_new.png" alt="Base Comfort" class="logo h-[60px] w-auto transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle">
+                </a>
+            </div>
+
+            <!-- Desktop: Navigation links centered absolutely -->
+            <div class="hidden md:flex gap-7 xl:gap-9 2xl:gap-12 items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <a href="massages.html" class="desktop-nav active text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Massages</a>
+                <a href="index.html#gift" class="desktop-nav text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Gift cards</a>
+                <a href="index.html#about" class="desktop-nav text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">About us</a>
+                <a href="#contact" class="desktop-nav text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Chat via WhatsApp</a>
+            </div>
+
+            <!-- Mobile: Book Now button only -->
+            <div class="flex md:hidden items-center">
+                <button class="btn-primary bg-base-olive border border-base-olive text-white py-2 px-4 text-[12px] rounded-[40px] italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold">Book Now</button>
+            </div>
+
+            <!-- Desktop: Buttons on the right -->
+            <div class="hidden md:flex gap-7 xl:gap-9 2xl:gap-12 items-center justify-end">
+                <button class="btn-nav desktop-nav bg-transparent border border-base-tan text-base-tan py-3 px-7 xl:py-4 xl:px-9 2xl:py-5 2xl:px-11 rounded-full cursor-pointer text-sm xl:text-sm 2xl:text-base italic font-serif transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-olive hover:text-white hover:border-base-olive">Contact</button>
+                <button class="btn-primary bg-base-olive border border-base-olive text-white py-3 px-7 md:rounded-full xl:py-4 xl:px-9 2xl:py-5 2xl:px-11 text-sm xl:text-sm 2xl:text-base italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold">Book Now</button>
             </div>
         </div>
     </nav>
@@ -79,16 +91,16 @@
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="index.html#about" class="block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">About us</a></li>
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="#contact" class="block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Chat via WhatsApp</a></li>
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="#contact" class="block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Contact</a></li>
-                <li class="mobile-menu-item mobile-menu-cta"><a href="#book" class="block mt-8 mx-8 py-4 text-center bg-base-olive text-white no-underline text-lg font-bold rounded-full transition-colors duration-300 hover:bg-base-gold">Book Now</a></li>
+                <li class="mobile-menu-item mobile-menu-cta"><a href="https://basecomfortmassage.setmore.com" target="_blank" class="block mt-8 mx-8 py-4 text-center bg-base-olive text-white no-underline text-lg font-bold rounded-full transition-colors duration-300 hover:bg-base-gold">Book Now</a></li>
             </ul>
         </div>
     </div>
 
-    <!-- Massages Section -->
-    <section class="massages-archive pt-[180px] pb-20 px-12 bg-base-cream">
-        <div class="massages-archive-head text-center mb-20">
-            <p class="subtitle text-sm tracking-[0.2em] uppercase mb-5 font-sans">What we do best</p>
-            <h1 class="main-title text-6xl md:text-8xl italic font-normal">Find your massage</h1>
+    <!-- Section 2: Massages -->
+    <section class="massages-archive pt-32 md:pt-40 xl:pt-44 2xl:pt-48 pb-16 md:pb-20 xl:pb-24 2xl:pb-28 px-5 md:px-12 xl:px-16 2xl:px-20 bg-base-cream">
+        <div class="massages-archive-head text-center mb-16 md:mb-20">
+            <p class="subtitle text-sm md:text-[15px] xl:text-sm 2xl:text-base tracking-[0.2em] uppercase mb-4 md:mb-5 font-sans">What we do best</p>
+            <h1 class="main-title text-4xl md:text-5xl xl:text-[3.5rem] 2xl:text-6xl italic font-normal">Find your massage</h1>
         </div>
 
         <div class="massages-grid max-w-7xl mx-auto grid grid-cols-1 gap-20">
@@ -98,8 +110,8 @@
                     <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Relaxation massage" class="w-full h-auto rounded-3xl">
                 </div>
                 <div class="massage-content">
-                    <h2 class="massage-title text-5xl italic mb-8 text-base-text">Relaxation massage</h2>
-                    <p class="massage-description text-lg font-sans leading-relaxed">Are you busy and in need of some me-time? Come visit us for a relaxing massage.<br><br>How we feel directly affects our bodies. High levels of stress not only lead to a full mind, but can also lead to headaches, tense muscles, and overall discomfort.<br><br>Our relaxation massage is designed for anyone experiencing stress, but you are also welcome if you don't have any symptoms and simply know you deserve this moment of bliss.</p>
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Relaxation massage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Are you busy and in need of some me-time? Come visit us for a relaxing massage.<br><br>How we feel directly affects our bodies. High levels of stress not only lead to a full mind, but can also lead to headaches, tense muscles, and overall discomfort.<br><br>Our relaxation massage is designed for anyone experiencing stress, but you are also welcome if you don't have any symptoms and simply know you deserve this moment of bliss.</p>
                 </div>
             </div>
 
@@ -109,8 +121,8 @@
                     <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Sports massage" class="w-full h-auto rounded-3xl">
                 </div>
                 <div class="massage-content md:order-1">
-                    <h2 class="massage-title text-5xl italic mb-8 text-base-text">Sports massage</h2>
-                    <p class="massage-description text-lg font-sans leading-relaxed">Our sports massage is specifically designed for people who work out frequently and focuses on improving their athletic performance, speeding up muscle recovery after a workout, and restoring and preventing injuries.<br><br>It's a firm and stimulating massage. Using techniques like compression, friction, stretching, and deep massage, the underlying tissue is loosened and knots are released from the muscles.</p>
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Sports massage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Our sports massage is specifically designed for people who work out frequently and focuses on improving their athletic performance, speeding up muscle recovery after a workout, and restoring and preventing injuries.<br><br>It's a firm and stimulating massage. Using techniques like compression, friction, stretching, and deep massage, the underlying tissue is loosened and knots are released from the muscles.</p>
                 </div>
             </div>
 
@@ -120,8 +132,8 @@
                     <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80" alt="Deep Tissue Massage" class="w-full h-auto rounded-3xl">
                 </div>
                 <div class="massage-content">
-                    <h2 class="massage-title text-5xl italic mb-8 text-base-text">Deep Tissue Massage</h2>
-                    <p class="massage-description text-lg font-sans leading-relaxed">Do you suffer from (chronic) pain or tension in your body or head? Then a deep tissue massage might be something for you. Deep tissue massage is a firm and intensive massage, similar to sports massage, but it focuses more on treating the entire body and addressing chronic pain, tension, and stiffness in the deeper layers of muscles and fascia.<br><br>Deep tissue massage focuses on treating deep tension, regardless of the cause. Using slow, focused, and firm pressure, deeper muscles and fascia are massaged, which can help release toxins and knots and reduce chronic pain. The massage focuses on the entire body, but specific areas can receive more attention in consultation with you.</p>
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Deep Tissue Massage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Do you suffer from (chronic) pain or tension in your body or head? Then a deep tissue massage might be something for you. Deep tissue massage is a firm and intensive massage, similar to sports massage, but it focuses more on treating the entire body and addressing chronic pain, tension, and stiffness in the deeper layers of muscles and fascia.<br><br>Deep tissue massage focuses on treating deep tension, regardless of the cause. Using slow, focused, and firm pressure, deeper muscles and fascia are massaged, which can help release toxins and knots and reduce chronic pain. The massage focuses on the entire body, but specific areas can receive more attention in consultation with you.</p>
                 </div>
             </div>
 
@@ -131,77 +143,83 @@
                     <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80" alt="Head and neck massage" class="w-full h-auto rounded-3xl">
                 </div>
                 <div class="massage-content md:order-1">
-                    <h2 class="massage-title text-5xl italic mb-8 text-base-text">Head- and neckmassage</h2>
-                    <p class="massage-description text-lg font-sans leading-relaxed">Many people suffer from headaches or (early) repetitive strain injuries due to poor posture. Do you spend a lot of time at the office or at the computer? Do you suffer from tension in your neck, shoulders, or head? Then come in for a head and neck massage.<br><br>This treatment focuses on your upper body and relieves tension in this area. We work with pressure points, starting with the upper back, arms, and shoulders, and gradually working our way up to the neck and head.</p>
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Head- and neckmassage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Many people suffer from headaches or (early) repetitive strain injuries due to poor posture. Do you spend a lot of time at the office or at the computer? Do you suffer from tension in your neck, shoulders, or head? Then come in for a head and neck massage.<br><br>This treatment focuses on your upper body and relieves tension in this area. We work with pressure points, starting with the upper back, arms, and shoulders, and gradually working our way up to the neck and head.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Opening Hours -->
-    <section class="opening-hours bg-base-tan py-20 px-12 border-t border-base-gold">
-        <div class="hours-card max-w-5xl mx-auto h-[500px] bg-cover bg-center rounded-t-[250px] border border-base-gold flex flex-col items-center justify-center text-center text-white p-20" style="background-image: url('assets/open.png');">
-            <p class="hours-subtitle text-sm tracking-widest mb-5">MON – SUN</p>
-            <h2 class="hours-title text-6xl italic mb-10">Open from Monday to Sunday</h2>
-            <button class="btn-primary bg-base-olive border border-base-olive text-white py-4 px-11 rounded-full text-sm italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold hover:-rotate-[5deg]">Book your Massage</button>
+    <!-- Section 3: Opening Hours -->
+    <section class="opening-hours bg-base-tan py-16 md:py-20 xl:py-24 2xl:py-28 px-5 md:px-12 xl:px-16 2xl:px-20 border-t border-base-gold">
+        <div class="hours-card max-w-5xl mx-auto h-[400px] md:h-[450px] xl:h-[500px] 2xl:h-[550px] bg-cover bg-center rounded-t-[200px] md:rounded-t-[225px] xl:rounded-t-[250px] 2xl:rounded-t-[275px] border border-base-gold flex flex-col items-center justify-center text-center text-white p-12 md:p-16 xl:p-20 2xl:p-24" style="background-image: url('assets/open.png');">
+            <p class="hours-subtitle text-xs md:text-sm xl:text-sm 2xl:text-base tracking-widest mb-4 md:mb-5 font-sans">MON – SUN</p>
+            <h2 class="hours-title text-3xl md:text-4xl xl:text-[3.5rem] 2xl:text-6xl italic mb-8 md:mb-10">Open from Monday to Sunday</h2>
+            <button class="btn-primary bg-base-olive border border-base-olive text-white py-3 md:py-4 px-8 md:px-11 rounded-full text-sm md:text-base xl:text-sm 2xl:text-base italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold">Book your Massage</button>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer bg-base-gray py-16 px-12 border-t border-base-gold text-base-text">
-        <div class="footer-content max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-20">
+    <!-- Section 4: Footer -->
+    <footer class="footer bg-base-gray py-[60px] md:py-16 xl:py-20 2xl:py-24 px-5 md:px-12 xl:px-16 2xl:px-20 border-t border-base-gold text-base-text">
+        <div class="footer-content max-w-7xl xl:max-w-[90rem] 2xl:max-w-[110rem] mx-auto grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-20 xl:gap-24 2xl:gap-28">
             <div class="footer-main">
-                <div class="footer-logo mb-5">
-                    <img src="assets/icon_base_gpt.png" alt="Base Comfort" class="h-20 w-auto">
+                <div class="flex items-start justify-between md:block">
+                    <a href="index.html" class="footer-logo mb-0 md:mb-2 xl:mb-3 2xl:mb-4 inline-block">
+                        <img src="assets/logo_base_new.png" alt="Base Comfort" class="h-16 md:h-20 xl:h-24 2xl:h-28 w-auto cursor-pointer">
+                    </a>
+                    <div class="md:hidden flex flex-col items-end justify-start gap-1">
+                        <p class="footer-contact text-sm font-sans m-0">info@basecomfort.nl</p>
+                        <p class="footer-contact text-sm font-sans m-0">+31 30 123 4567</p>
+                    </div>
                 </div>
-                <p class="footer-contact text-sm mb-2.5 font-sans">info@basecomfort.nl</p>
-                <p class="footer-contact text-sm mb-2.5 font-sans">+31 30 123 4567</p>
-                <div class="newsletter mt-7 flex gap-2.5">
-                    <input type="email" placeholder="Your email" class="newsletter-input flex-1 py-3 px-5 border border-base-text rounded-full text-sm bg-transparent font-sans text-base-text placeholder:text-base-text/70">
-                    <button class="btn-newsletter bg-base-olive border border-base-olive text-white py-3 px-7 rounded-full text-sm font-serif cursor-pointer transition-all duration-300 hover:bg-base-gold hover:border-base-gold">Subscribe</button>
+                <p class="footer-contact hidden md:block text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans">info@basecomfort.nl</p>
+                <p class="footer-contact hidden md:block text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans">+31 30 123 4567</p>
+                <div class="newsletter mt-7 xl:mt-9 2xl:mt-10 flex gap-2.5 xl:gap-3 2xl:gap-4">
+                    <input type="email" placeholder="Your email" class="newsletter-input flex-1 py-3 xl:py-4 2xl:py-5 px-5 xl:px-6 2xl:px-7 border border-base-text rounded-full text-sm xl:text-sm 2xl:text-base bg-transparent font-sans text-base-text placeholder:text-base-text/70">
+                    <button class="btn-newsletter bg-base-olive border border-base-olive text-white py-[14px] px-8 text-[15px] rounded-[40px] md:py-3 md:px-7 md:text-sm md:rounded-full xl:py-4 xl:px-9 2xl:py-5 2xl:px-11 xl:text-sm 2xl:text-base font-serif cursor-pointer transition-all duration-300 hover:bg-base-gold hover:border-base-gold">Subscribe</button>
                 </div>
             </div>
 
-            <div class="footer-columns grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6">
+            <div class="footer-columns grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 xl:gap-8 2xl:gap-10">
                 <div class="footer-column footer-accordion">
-                    <h4 class="footer-accordion-header text-lg mb-2 cursor-pointer md:cursor-default flex justify-between items-center">
+                    <h4 class="footer-accordion-header text-lg xl:text-lg 2xl:text-xl mb-2 xl:mb-3 2xl:mb-4 cursor-pointer md:cursor-default flex justify-between items-center">
                         Location
                         <span class="footer-accordion-icon md:hidden">+</span>
                     </h4>
                     <div class="footer-accordion-content md:block">
-                        <p class="text-sm leading-relaxed font-sans">Oudegracht 123<br>3511 AB Utrecht<br>The Netherlands</p>
+                        <p class="text-sm xl:text-sm 2xl:text-base leading-relaxed font-sans">Oudegracht 123<br>3511 AB Utrecht<br>The Netherlands</p>
                     </div>
                 </div>
 
                 <div class="footer-column footer-accordion">
-                    <h4 class="footer-accordion-header text-lg mb-2 cursor-pointer md:cursor-default flex justify-between items-center">
+                    <h4 class="footer-accordion-header text-lg xl:text-lg 2xl:text-xl mb-2 xl:mb-3 2xl:mb-4 cursor-pointer md:cursor-default flex justify-between items-center">
                         Info
                         <span class="footer-accordion-icon md:hidden">+</span>
                     </h4>
                     <div class="footer-accordion-content md:block">
-                        <a href="#contact" class="block text-base-text no-underline text-sm mb-2.5 font-sans transition-opacity duration-300 hover:opacity-60">Contact</a>
-                        <a href="#terms" class="block text-base-text no-underline text-sm mb-2.5 font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
+                        <a href="#contact" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Contact</a>
+                        <a href="#terms" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
                     </div>
                 </div>
 
                 <div class="footer-column footer-accordion">
-                    <h4 class="footer-accordion-header text-lg mb-2 cursor-pointer md:cursor-default flex justify-between items-center">
+                    <h4 class="footer-accordion-header text-lg xl:text-lg 2xl:text-xl mb-2 xl:mb-3 2xl:mb-4 cursor-pointer md:cursor-default flex justify-between items-center">
                         Follow us
                         <span class="footer-accordion-icon md:hidden">+</span>
                     </h4>
                     <div class="footer-accordion-content md:block">
-                        <a href="#facebook" class="block text-base-text no-underline text-sm mb-2.5 font-sans transition-opacity duration-300 hover:opacity-60">Facebook</a>
-                        <a href="#instagram" class="block text-base-text no-underline text-sm mb-2.5 font-sans transition-opacity duration-300 hover:opacity-60">Instagram</a>
+                        <a href="#facebook" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Facebook</a>
+                        <a href="#instagram" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Instagram</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="footer-bottom border-t border-base-text/20 pt-5 mt-7 text-center">
-            <p class="copyright text-sm m-0 mb-2 font-sans">All rights reserved - Base Comfort 2025</p>
-            <div class="footer-legal flex justify-center gap-4 m-0 p-0">
-                <a href="#privacy" class="text-base-text no-underline text-sm font-sans transition-opacity duration-300 hover:opacity-60">Privacy policy</a>
-                <a href="#terms" class="text-base-text no-underline text-sm font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
+        <div class="footer-bottom border-t border-base-text/20 pt-5 xl:pt-6 2xl:pt-8 mt-7 xl:mt-9 2xl:mt-10 text-center">
+            <p class="copyright text-sm xl:text-sm 2xl:text-base m-0 mb-2 xl:mb-3 2xl:mb-4 font-sans">All rights reserved - Base Comfort 2025</p>
+            <div class="footer-legal flex justify-center gap-4 xl:gap-5 2xl:gap-6 m-0 p-0">
+                <a href="#privacy" class="text-base-text no-underline text-sm xl:text-sm 2xl:text-base font-sans transition-opacity duration-300 hover:opacity-60">Privacy policy</a>
+                <a href="#terms" class="text-base-text no-underline text-sm xl:text-sm 2xl:text-base font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
             </div>
         </div>
     </footer>

@@ -1,5 +1,22 @@
 /* Custom CSS for effects that Tailwind doesn't cover */
 
+/* Prevenir reset de zoom del navegador al cambiar de página */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+}
+
+/* Botón Book Now - SIEMPRE en negrita (scrolled y no scrolled) */
+.btn-primary {
+    font-weight: 700 !important;
+}
+
 /* Navbar - Scrolled state */
 .navbar.scrolled {
     background: #F4F0E8 !important;
@@ -7,11 +24,13 @@
     top: 0;
 }
 
-.navbar.scrolled .desktop-nav {
+/* Solo cambiar color de los links de navegación (no botones) */
+.navbar.scrolled .desktop-nav:not(.btn-nav):not(.btn-primary) {
     color: #5a5a4a;
     font-weight: 600;
 }
 
+/* Botón Contact en estado scrolled - solo cambiar colores, NO peso de fuente */
 .navbar.scrolled .btn-nav {
     border-color: #C89C6C;
     color: #5a5a4a;
