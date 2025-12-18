@@ -113,6 +113,13 @@ function getMobileMenu(activePage) {
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="${aboutHref}" class="${aboutUsActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">About us</a></li>
                 <li class="mobile-menu-item mobile-menu-cta"><a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary block mt-8 mx-8 py-4 text-center bg-base-olive border border-base-olive text-white no-underline text-base italic font-serif rounded-full hover:bg-base-gold hover:border-base-gold">Book Now</a></li>
                 <li class="mobile-menu-item mobile-menu-cta"><a href="about-us.html#contact" class="btn-outlined block mt-4 mx-8 py-4 text-center bg-transparent border-2 border-base-tan text-base-tan no-underline text-base italic font-serif rounded-full hover:bg-base-tan hover:text-white hover:border-base-tan">Contact</a></li>
+                <li class="mobile-menu-item mobile-menu-lang text-center mt-6 px-8">
+                    <div class="flex items-center justify-center gap-2">
+                        <a href="../nl/${activePage === 'home' ? 'index' : activePage}.html" class="text-base-text/60 no-underline text-sm font-sans transition-opacity duration-300 hover:text-base-text">🇳🇱 NL</a>
+                        <span class="text-base-text/40 text-sm">|</span>
+                        <a href="${activePage === 'home' ? 'index' : activePage}.html" class="text-base-text no-underline text-sm font-sans font-semibold">🇬🇧 EN</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>`;
@@ -135,7 +142,7 @@ function getNavbar(activePage) {
     const aboutHref = 'about-us.html';
 
     return `
-    <nav class="navbar fixed top-0 left-0 right-0 z-[1001] py-1.5 px-5 md:px-12 xl:py-2 2xl:py-2.5 xl:px-16 2xl:px-20" id="navbar">
+    <nav class="navbar fixed top-0 left-0 right-0 z-[1001] py-3 px-5 md:px-12 xl:py-2 2xl:py-2.5 xl:px-16 2xl:px-20" id="navbar">
         <div class="max-w-7xl xl:max-w-[90rem] 2xl:max-w-[110rem] mx-auto">
             <!-- Mobile Layout -->
             <div class="flex md:hidden justify-between items-center relative">
@@ -145,13 +152,10 @@ function getNavbar(activePage) {
                 </button>
                 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
                     <a href="index.html" class="pointer-events-auto">
-                        <img src="../assets/logo_base_new.png" alt="Base Comfort" class="logo h-[60px] w-auto transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle">
+                        <img src="../assets/logo_base_new_round.png" alt="Base Comfort" class="logo h-[50px] w-[50px] transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle">
                     </a>
                 </div>
                 <div class="flex items-center gap-3 ml-auto">
-                    <a href="../nl/${activePage === 'home' ? 'index' : activePage}.html" class="language-switcher flex items-center text-base-tan hover:opacity-70 transition-opacity no-underline">
-                        <span class="text-sm font-sans">🇳🇱</span>
-                    </a>
                     <a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary bg-base-olive border border-base-olive text-white py-2 px-4 text-[12px] leading-none rounded-[40px] italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold no-underline inline-flex items-center justify-center">Book Now</a>
                 </div>
             </div>
