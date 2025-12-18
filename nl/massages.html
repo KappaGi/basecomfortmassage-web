@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Base Comfort Massage - Onze Massagediensten">
+    <title>Onze Massages - Base Comfort Massage</title>
+    <link rel="alternate" hreflang="en" href="/en/massages.html">
+    <link rel="alternate" hreflang="nl" href="/nl/massages.html">
+    <link rel="alternate" hreflang="x-default" href="/nl/massages.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'base-cream': '#F5EBDD',
+                        'base-tan': '#E1BFA1',
+                        'base-gold': '#C89C6C',
+                        'base-gray': '#D8D2C2',
+                        'base-olive': '#A2A37E',
+                        'base-text': '#5a5a4a',
+                    },
+                    fontFamily: {
+                        'serif': ['Georgia', 'Palatino', 'serif'],
+                        'sans': ['Open Sans', 'sans-serif'],
+                    },
+                    screens: {
+                        'custom': '1815px',
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="../custom.css?v=7">
+    <script src="../components-nl.js"></script>
+</head>
+<body class="massages-page font-serif bg-base-cream text-base-text leading-relaxed overflow-x-hidden min-h-screen">
+    <!-- Section 1: Navigation Bar -->
+    <script>document.write(getNavbar('massages'));</script>
+
+    <!-- Mobile Menu -->
+    <script>document.write(getMobileMenu('massages'));</script>
+
+    <!-- Section 2: Massages -->
+    <section class="massages-archive pt-32 md:pt-40 xl:pt-44 2xl:pt-48 pb-16 md:pb-20 xl:pb-24 2xl:pb-28 px-5 md:px-12 xl:px-16 2xl:px-20 bg-base-cream">
+        <div class="massages-archive-head text-center mb-16 md:mb-20">
+            <p class="subtitle text-sm md:text-[15px] xl:text-sm 2xl:text-base tracking-[0.2em] uppercase mb-4 md:mb-5 font-sans">Wat we het beste doen</p>
+            <h1 class="main-title text-4xl md:text-5xl xl:text-[3.5rem] 2xl:text-6xl italic font-normal">Vind jouw massage</h1>
+        </div>
+
+        <div class="massages-grid max-w-7xl mx-auto grid grid-cols-1 gap-20">
+            <!-- Massage Card 1: Relaxation Massage -->
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Relaxation massage" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="massage-content">
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Ontspanningsmassage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Ben je druk en heb je behoefte aan wat me-time? Kom bij ons langs voor een ontspannende massage.<br><br>Hoe we ons voelen heeft direct invloed op ons lichaam. Hoge stressniveaus leiden niet alleen tot een vol hoofd, maar kunnen ook leiden tot hoofdpijn, gespannen spieren en algemeen ongemak.<br><br>Onze ontspanningsmassage is ontworpen voor iedereen die stress ervaart, maar je bent ook welkom als je geen symptomen hebt en gewoon weet dat je dit moment van gelukzaligheid verdient.</p>
+                </div>
+            </div>
+
+            <!-- Massage Card 2: Sports Massage -->
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full md:order-2">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Sports massage" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="massage-content md:order-1">
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Sportmassage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Onze sportmassage is speciaal ontworpen voor mensen die vaak sporten en richt zich op het verbeteren van hun atletische prestaties, het versnellen van spierherstel na een training en het herstellen en voorkomen van blessures.<br><br>Het is een stevige en stimulerende massage. Met behulp van technieken zoals compressie, wrijving, stretching en diepe massage wordt het onderliggende weefsel losgemaakt en worden knopen uit de spieren vrijgemaakt.</p>
+                </div>
+            </div>
+
+            <!-- Massage Card 3: Deep Tissue Massage -->
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80" alt="Deep Tissue Massage" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="massage-content">
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Diepe Weefselmassage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Heb je last van (chronische) pijn of spanning in je lichaam of hoofd? Dan is een diepe weefselmassage misschien iets voor jou. Diepe weefselmassage is een stevige en intensieve massage, vergelijkbaar met sportmassage, maar richt zich meer op het behandelen van het hele lichaam en het aanpakken van chronische pijn, spanning en stijfheid in de diepere lagen van spieren en fascia.<br><br>Diepe weefselmassage richt zich op het behandelen van diepe spanning, ongeacht de oorzaak. Met behulp van langzame, gerichte en stevige druk worden diepere spieren en fascia gemasseerd, wat kan helpen om toxines en knopen vrij te maken en chronische pijn te verminderen. De massage richt zich op het hele lichaam, maar specifieke gebieden kunnen in overleg met jou meer aandacht krijgen.</p>
+                </div>
+            </div>
+
+            <!-- Massage Card 4: Head and Neck Massage -->
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full md:order-2">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80" alt="Head and neck massage" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="massage-content md:order-1">
+                    <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Hoofd- en nekmassage</h2>
+                    <p class="massage-description text-lg xl:text-base 2xl:text-lg font-sans leading-relaxed">Veel mensen lijden aan hoofdpijn of (beginnende) RSI door een slechte houding. Breng je veel tijd door op kantoor of achter de computer? Heb je last van spanning in je nek, schouders of hoofd? Kom dan langs voor een hoofd- en nekmassage.<br><br>Deze behandeling richt zich op je bovenlichaam en verlicht spanning in dit gebied. We werken met drukpunten, beginnend bij de bovenrug, armen en schouders, en werken geleidelijk omhoog naar de nek en het hoofd.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Opening Hours -->
+    <script>document.write(getOpeningHours(false));</script>
+
+    <!-- Section 4: Footer -->
+    <script>document.write(getFooter());</script>
+
+    <script src="../script.js"></script>
+</body>
+</html>
