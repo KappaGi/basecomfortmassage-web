@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Surprise someone special with a massage gift card from Base Comfort. The perfect gift for relaxation and well-being.">
+    <title>Gift Cards - Base Comfort Massage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'base-cream': '#F5EBDD',
+                        'base-tan': '#E1BFA1',
+                        'base-gold': '#C89C6C',
+                        'base-gray': '#D8D2C2',
+                        'base-olive': '#A2A37E',
+                        'base-text': '#5a5a4a',
+                    },
+                    fontFamily: {
+                        'serif': ['Georgia', 'Palatino', 'serif'],
+                        'sans': ['Open Sans', 'sans-serif'],
+                    },
+                    screens: {
+                        'custom': '1815px',
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="custom.css?v=7">
+    <script src="components.js"></script>
+</head>
+<body class="gift-cards-page font-serif bg-base-cream text-base-text leading-relaxed overflow-x-hidden min-h-screen">
+    <!-- Section 1: Navigation Bar -->
+    <script>document.write(getNavbar('gift-cards'));</script>
+
+    <!-- Mobile Menu -->
+    <script>document.write(getMobileMenu('gift-cards'));</script>
+
+    <!-- Section 2: Gift Cards -->
+    <section class="gift-cards-archive bg-base-cream pt-32 md:pt-40 xl:pt-44 2xl:pt-48 pb-16 md:pb-20 xl:pb-24 2xl:pb-28 px-5 md:px-12 xl:px-16 2xl:px-20 bg-base-cream">
+        <!-- Header estilo archive -->
+        <div class="text-center mb-12 md:mb-16">
+            <p class="subtitle text-sm md:text-[15px] xl:text-sm 2xl:text-base tracking-[0.2em] uppercase mb-4 md:mb-5 font-sans">The perfect gift</p>
+            <h1 class="main-title text-4xl md:text-5xl xl:text-[3.5rem] 2xl:text-6xl italic font-normal">Gift Cards</h1>
+        </div>
+
+        <!-- Contenido de gift card -->
+        <div class="promo-card max-w-7xl xl:max-w-[90rem] 2xl:max-w-[110rem] mx-auto flex flex-col md:flex-row gap-3 md:gap-4 custom:gap-6 xl:gap-6 2xl:gap-8 items-center justify-center">
+            <div class="card-image flex-shrink-0 w-[520px] md:w-[50%] md:max-w-[55%] md:order-2">
+                <img src="assets/gift_all.png" alt="Gift card" class="w-full h-auto -translate-x-2 md:translate-x-0 md:-translate-y-12">
+            </div>
+            <div class="card-content flex-1 md:w-[50%] md:order-1 md:flex md:flex-col md:items-center">
+                <h2 class="text-3xl leading-tight tracking-tight md:text-4xl md:text-5xl custom:text-6xl xl:text-4xl 2xl:text-5xl md:leading-tight italic mb-[30px] md:mb-6 custom:mb-8 xl:mb-8 2xl:mb-10 text-base-text md:self-start">Surprise your special one</h2>
+                <p class="text-[15px] leading-[1.6] md:text-base md:text-lg xl:text-base 2xl:text-lg md:leading-relaxed font-sans md:self-start">Do you want to surprise someone with a unique and relaxing gift? Give a massage gift voucher for Base Comfort. A massage is the perfect gift to let someone enjoy pure relaxation and well-being. The massage gift voucher is ideal for a birthday, anniversary, or just because.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Opening Hours -->
+    <script>document.write(getOpeningHours());</script>
+
+    <!-- Section 4: Footer -->
+    <script>document.write(getFooter());</script>
+
+    <script src="script.js"></script>
+</body>
+</html>

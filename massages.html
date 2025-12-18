@@ -51,9 +51,11 @@
 
         <div class="massages-grid max-w-7xl mx-auto grid grid-cols-1 gap-20">
             <!-- Massage Card 1: Relaxation Massage -->
-            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                <div class="massage-image">
-                    <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Relaxation massage" class="w-full h-auto rounded-3xl">
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80" alt="Relaxation massage" class="w-full h-full object-cover">
+                    </div>
                 </div>
                 <div class="massage-content">
                     <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Relaxation massage</h2>
@@ -62,9 +64,11 @@
             </div>
 
             <!-- Massage Card 2: Sports Massage -->
-            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                <div class="massage-image md:order-2">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Sports massage" class="w-full h-auto rounded-3xl">
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full md:order-2">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80" alt="Sports massage" class="w-full h-full object-cover">
+                    </div>
                 </div>
                 <div class="massage-content md:order-1">
                     <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Sports massage</h2>
@@ -73,9 +77,11 @@
             </div>
 
             <!-- Massage Card 3: Deep Tissue Massage -->
-            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                <div class="massage-image">
-                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80" alt="Deep Tissue Massage" class="w-full h-auto rounded-3xl">
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=800&q=80" alt="Deep Tissue Massage" class="w-full h-full object-cover">
+                    </div>
                 </div>
                 <div class="massage-content">
                     <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Deep Tissue Massage</h2>
@@ -84,9 +90,11 @@
             </div>
 
             <!-- Massage Card 4: Head and Neck Massage -->
-            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                <div class="massage-image md:order-2">
-                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80" alt="Head and neck massage" class="w-full h-auto rounded-3xl">
+            <div class="massage-card grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="massage-image h-full md:order-2">
+                    <div class="h-[300px] md:h-[400px] xl:h-[450px] 2xl:h-[500px] w-full overflow-hidden rounded-3xl">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800&q=80" alt="Head and neck massage" class="w-full h-full object-cover">
+                    </div>
                 </div>
                 <div class="massage-content md:order-1">
                     <h2 class="massage-title text-3xl md:text-4xl xl:text-3xl 2xl:text-4xl italic mb-6 md:mb-8 text-base-text">Head- and neckmassage</h2>
@@ -97,7 +105,7 @@
     </section>
 
     <!-- Section 3: Opening Hours -->
-    <script>document.write(getOpeningHours());</script>
+    <script>document.write(getOpeningHours(false));</script>
 
     <!-- Section 4: Footer -->
     <script>document.write(getFooter());</script>

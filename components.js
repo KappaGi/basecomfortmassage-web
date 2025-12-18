@@ -22,10 +22,6 @@ function getFooter() {
                 </div>
                 <p class="footer-contact hidden md:block text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans">info@basecomfort.nl</p>
                 <p class="footer-contact hidden md:block text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans">+31 30 123 4567</p>
-                <div class="newsletter mt-7 xl:mt-9 2xl:mt-10 flex gap-2.5 xl:gap-3 2xl:gap-4">
-                    <input type="email" placeholder="Your email" class="newsletter-input flex-1 py-3 xl:py-4 2xl:py-5 px-5 xl:px-6 2xl:px-7 border border-base-text rounded-full text-sm xl:text-sm 2xl:text-base bg-transparent font-sans text-base-text placeholder:text-base-text/70">
-                    <button class="btn-newsletter bg-base-olive border border-base-olive text-white py-[14px] px-8 text-[15px] rounded-[40px] md:py-3 md:px-7 md:text-sm md:rounded-full xl:py-4 xl:px-9 2xl:py-5 2xl:px-11 xl:text-sm 2xl:text-base font-serif cursor-pointer transition-all duration-300 hover:bg-base-gold hover:border-base-gold">Subscribe</button>
-                </div>
             </div>
 
             <div class="footer-columns grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 xl:gap-8 2xl:gap-10">
@@ -45,8 +41,8 @@ function getFooter() {
                         <span class="footer-accordion-icon md:hidden">+</span>
                     </h4>
                     <div class="footer-accordion-content md:block">
-                        <a href="#contact" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Contact</a>
-                        <a href="#terms" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
+                        <a href="about-us.html" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">About us</a>
+                        <a href="terms-and-conditions.html" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
                     </div>
                 </div>
 
@@ -56,8 +52,7 @@ function getFooter() {
                         <span class="footer-accordion-icon md:hidden">+</span>
                     </h4>
                     <div class="footer-accordion-content md:block">
-                        <a href="#facebook" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Facebook</a>
-                        <a href="#instagram" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Instagram</a>
+                        <a href="https://www.instagram.com/basecomfortmassage/" target="_blank" class="block text-base-text no-underline text-sm xl:text-sm 2xl:text-base mb-2.5 xl:mb-3 2xl:mb-4 font-sans transition-opacity duration-300 hover:opacity-60">Instagram</a>
                     </div>
                 </div>
             </div>
@@ -66,8 +61,8 @@ function getFooter() {
         <div class="footer-bottom border-t border-base-text/20 pt-5 xl:pt-6 2xl:pt-8 mt-7 xl:mt-9 2xl:mt-10 text-center">
             <p class="copyright text-sm xl:text-sm 2xl:text-base m-0 mb-2 xl:mb-3 2xl:mb-4 font-sans">All rights reserved - Base Comfort 2025</p>
             <div class="footer-legal flex justify-center gap-4 xl:gap-5 2xl:gap-6 m-0 p-0">
-                <a href="#privacy" class="text-base-text no-underline text-sm xl:text-sm 2xl:text-base font-sans transition-opacity duration-300 hover:opacity-60">Privacy policy</a>
-                <a href="#terms" class="text-base-text no-underline text-sm xl:text-sm 2xl:text-base font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
+                <a href="terms-and-conditions.html#privacy" class="text-base-text no-underline text-sm xl:text-sm 2xl:text-base font-sans transition-opacity duration-300 hover:opacity-60">Privacy policy</a>
+                <a href="terms-and-conditions.html" class="text-base-text no-underline text-sm xl:text-sm 2xl:text-base font-sans transition-opacity duration-300 hover:opacity-60">Terms & Conditions</a>
             </div>
         </div>
     </footer>`;
@@ -76,15 +71,17 @@ function getFooter() {
 /**
  * Get Opening Hours Component
  * Returns the opening hours section HTML
- * Standardized to massages.html version (card style with rounded top)
+ * @param {boolean} showButton - Whether to show the "Book your Massage" button (default: true)
  */
-function getOpeningHours() {
+function getOpeningHours(showButton = true) {
+    const buttonHtml = showButton ? '<a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary bg-base-olive border border-base-olive text-white py-3 md:py-4 px-8 md:px-11 rounded-full text-sm md:text-base xl:text-sm 2xl:text-base italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold no-underline inline-block">Book your Massage</a>' : '';
+
     return `
     <section class="opening-hours bg-base-tan py-16 md:py-20 xl:py-24 2xl:py-28 px-5 md:px-12 xl:px-16 2xl:px-20 border-t border-base-gold">
         <div class="hours-card max-w-5xl mx-auto h-[400px] md:h-[450px] xl:h-[500px] 2xl:h-[550px] bg-cover bg-center rounded-t-[200px] md:rounded-t-[225px] xl:rounded-t-[250px] 2xl:rounded-t-[275px] border border-base-gold flex flex-col items-center justify-center text-center text-white p-12 md:p-16 xl:p-20 2xl:p-24" style="background-image: url('assets/open.png');">
             <p class="hours-subtitle text-xs md:text-sm xl:text-sm 2xl:text-base tracking-widest mb-4 md:mb-5 font-sans">MON – SUN</p>
             <h2 class="hours-title text-3xl md:text-4xl xl:text-[3.5rem] 2xl:text-6xl italic mb-8 md:mb-10">Open from Monday to Sunday</h2>
-            <button class="btn-primary bg-base-olive border border-base-olive text-white py-3 md:py-4 px-8 md:px-11 rounded-full text-sm md:text-base xl:text-sm 2xl:text-base italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold">Book your Massage</button>
+            ${buttonHtml}
         </div>
     </section>`;
 }
@@ -95,23 +92,27 @@ function getOpeningHours() {
  * @param {string} activePage - Current page identifier ('home' or 'massages')
  */
 function getMobileMenu(activePage) {
-    // Determine active state for massages link
+    // Determine active states for each page
+    const homeActive = activePage === 'home' ? 'active' : '';
     const massagesActive = activePage === 'massages' ? 'active' : '';
+    const giftCardsActive = activePage === 'gift-cards' ? 'active' : '';
+    const aboutUsActive = activePage === 'about-us' ? 'active' : '';
 
-    // Determine link hrefs based on current page
-    const giftHref = activePage === 'home' ? '#gift' : 'index.html#gift';
-    const aboutHref = activePage === 'home' ? '#about' : 'index.html#about';
+    // Determine link hrefs - all links now go to dedicated pages
+    const giftHref = 'gift-cards.html';
+    const aboutHref = 'about-us.html';
 
     return `
     <div class="mobile-menu fixed inset-0 z-[999] pointer-events-none opacity-0 transition-opacity duration-500" id="mobileMenu">
         <div class="mobile-menu-overlay absolute inset-0 bg-black/50" id="menuOverlay"></div>
         <div class="mobile-menu-content absolute top-0 left-0 w-4/5 max-w-sm h-full bg-base-cream transform -translate-x-full transition-transform duration-500 ease-in-out shadow-2xl overflow-y-auto">
             <ul class="mobile-menu-list pt-24 pb-8">
+                <li class="mobile-menu-item border-b border-base-gold/20"><a href="index.html" class="${homeActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Home</a></li>
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="massages.html" class="${massagesActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Massages</a></li>
-                <li class="mobile-menu-item border-b border-base-gold/20"><a href="${giftHref}" class="block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Gift cards</a></li>
-                <li class="mobile-menu-item border-b border-base-gold/20"><a href="${aboutHref}" class="block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">About us</a></li>
-                <li class="mobile-menu-item border-b border-base-gold/20"><a href="#contact" class="block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Contact</a></li>
-                <li class="mobile-menu-item mobile-menu-cta"><a href="https://basecomfortmassage.setmore.com" target="_blank" class="block mt-8 mx-8 py-4 text-center bg-base-olive text-white no-underline text-lg font-bold rounded-full transition-colors duration-300 hover:bg-base-gold">Book Now</a></li>
+                <li class="mobile-menu-item border-b border-base-gold/20"><a href="${giftHref}" class="${giftCardsActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Gift cards</a></li>
+                <li class="mobile-menu-item border-b border-base-gold/20"><a href="${aboutHref}" class="${aboutUsActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">About us</a></li>
+                <li class="mobile-menu-item mobile-menu-cta"><a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary block mt-8 mx-8 py-4 text-center bg-base-olive border border-base-olive text-white no-underline text-base italic font-serif rounded-full hover:bg-base-gold hover:border-base-gold">Book Now</a></li>
+                <li class="mobile-menu-item mobile-menu-cta"><a href="about-us.html#contact" class="btn-outlined block mt-4 mx-8 py-4 text-center bg-transparent border-2 border-base-tan text-base-tan no-underline text-base italic font-serif rounded-full hover:bg-base-tan hover:text-white hover:border-base-tan">Contact</a></li>
             </ul>
         </div>
     </div>`;
@@ -123,12 +124,15 @@ function getMobileMenu(activePage) {
  * @param {string} activePage - Current page identifier ('home' or 'massages')
  */
 function getNavbar(activePage) {
-    // Determine active state for massages link
+    // Determine active states for each page
+    const homeActive = activePage === 'home' ? 'active' : '';
     const massagesActive = activePage === 'massages' ? 'active' : '';
+    const giftCardsActive = activePage === 'gift-cards' ? 'active' : '';
+    const aboutUsActive = activePage === 'about-us' ? 'active' : '';
 
-    // Determine link hrefs based on current page
-    const giftHref = activePage === 'home' ? '#gift' : 'index.html#gift';
-    const aboutHref = activePage === 'home' ? '#about' : 'index.html#about';
+    // Determine link hrefs - all links now go to dedicated pages
+    const giftHref = 'gift-cards.html';
+    const aboutHref = 'about-us.html';
 
     return `
     <nav class="navbar fixed top-0 left-0 right-0 z-[1001] py-1.5 px-5 md:px-12 xl:py-2 2xl:py-2.5 xl:px-16 2xl:px-20" id="navbar">
@@ -157,20 +161,24 @@ function getNavbar(activePage) {
 
             <!-- Desktop: Navigation links centered absolutely -->
             <div class="hidden md:flex gap-7 xl:gap-9 2xl:gap-12 items-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                <a href="index.html" class="desktop-nav ${homeActive} text-base-tan no-underline transition-all duration-300 relative pb-1.5 hover:opacity-70 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 xl:h-6 xl:w-6 2xl:h-7 2xl:w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                </a>
                 <a href="massages.html" class="desktop-nav ${massagesActive} text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Massages</a>
-                <a href="${giftHref}" class="desktop-nav text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Gift cards</a>
-                <a href="${aboutHref}" class="desktop-nav text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">About us</a>
+                <a href="${giftHref}" class="desktop-nav ${giftCardsActive} text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">Gift cards</a>
+                <a href="${aboutHref}" class="desktop-nav ${aboutUsActive} text-base-tan no-underline text-sm xl:text-sm 2xl:text-base font-semibold transition-all duration-300 relative pb-1.5 font-sans hover:opacity-70">About us</a>
             </div>
 
             <!-- Mobile: Book Now button only -->
             <div class="flex md:hidden items-center">
-                <button class="btn-primary bg-base-olive border border-base-olive text-white py-2 px-4 text-[12px] rounded-[40px] italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold">Book Now</button>
+                <a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary bg-base-olive border border-base-olive text-white py-2 px-4 text-[12px] leading-none rounded-[40px] italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold no-underline inline-flex items-center justify-center">Book Now</a>
             </div>
 
             <!-- Desktop: Buttons on the right -->
             <div class="hidden md:flex gap-7 xl:gap-9 2xl:gap-12 items-center justify-end">
-                <button class="btn-nav desktop-nav bg-transparent border border-base-tan text-base-tan py-3 px-7 xl:py-4 xl:px-9 2xl:py-5 2xl:px-11 rounded-full cursor-pointer text-sm xl:text-sm 2xl:text-base italic font-serif transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-olive hover:text-white hover:border-base-olive">Contact</button>
-                <button class="btn-primary bg-base-olive border border-base-olive text-white py-3 px-7 md:rounded-full xl:py-4 xl:px-9 2xl:py-5 2xl:px-11 text-sm xl:text-sm 2xl:text-base italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold">Book Now</button>
+                <a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary bg-base-olive border border-base-olive text-white py-3 px-7 md:rounded-full xl:py-4 xl:px-9 2xl:py-5 2xl:px-11 text-sm xl:text-sm 2xl:text-base italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold no-underline inline-block">Book Now</a>
             </div>
         </div>
     </nav>`;
