@@ -106,6 +106,13 @@ body {
     transform: translateX(0);
 }
 
+/* Mobile Menu item active page indicator */
+.mobile-menu-item a.active {
+    background-color: #D8D2C2; /* base-gray */
+    font-weight: 600;
+    color: #5a5a4a; /* base-text */
+}
+
 /* Mobile Menu scrolled state - adjust top padding */
 .mobile-menu.scrolled .mobile-menu-list {
     padding-top: 80px;
