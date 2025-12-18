@@ -152,7 +152,7 @@ function getNavbar(activePage) {
                 </button>
                 <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
                     <a href="index.html" class="pointer-events-auto">
-                        <img src="../assets/logo_base_new_round.png" alt="Base Comfort" class="logo h-[50px] w-[50px] transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle">
+                        <img src="../assets/logo_base_new_round.png" alt="Base Comfort" class="logo h-[60px] w-[60px] transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle">
                     </a>
                 </div>
                 <div class="flex items-center gap-3 ml-auto">
