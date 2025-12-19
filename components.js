@@ -13,7 +13,7 @@ function getFooter() {
             <div class="footer-main">
                 <div class="flex items-start justify-between md:block">
                     <a href="index.html" class="footer-logo mb-0 md:mb-2 xl:mb-3 2xl:mb-4 inline-block">
-                        <img src="assets/logo_base_new.png" alt="Base Comfort" class="h-16 md:h-20 xl:h-24 2xl:h-28 w-auto cursor-pointer">
+                        <img src="assets/logo_base_new.png" alt="Base Comfort" class="h-16 md:h-20 xl:h-24 2xl:h-28 custom:h-32 w-auto cursor-pointer">
                     </a>
                     <div class="md:hidden flex flex-col items-end justify-start gap-1">
                         <p class="footer-contact text-sm font-sans m-0">info@basecomfort.nl</p>
@@ -78,7 +78,7 @@ function getOpeningHours(showButton = true) {
 
     return `
     <section class="opening-hours bg-base-tan py-16 md:py-20 xl:py-24 2xl:py-28 px-5 md:px-12 xl:px-16 2xl:px-20 border-t border-base-gold">
-        <div class="hours-card max-w-5xl mx-auto h-[400px] md:h-[450px] xl:h-[500px] 2xl:h-[550px] bg-cover bg-center rounded-t-[200px] md:rounded-t-[225px] xl:rounded-t-[250px] 2xl:rounded-t-[275px] border border-base-gold flex flex-col items-center justify-center text-center text-white p-12 md:p-16 xl:p-20 2xl:p-24" style="background-image: url('assets/open.png');">
+        <div class="hours-card max-w-5xl mx-auto h-[280px] md:h-[350px] xl:h-[450px] 2xl:h-[500px] bg-cover bg-center rounded-t-[200px] md:rounded-t-[225px] xl:rounded-t-[250px] 2xl:rounded-t-[275px] border border-base-gold flex flex-col items-center justify-center text-center text-white p-12 md:p-16 xl:p-20 2xl:p-24" style="background-image: url('assets/open.png');">
             <p class="hours-subtitle text-xs md:text-sm xl:text-sm 2xl:text-base tracking-widest mb-4 md:mb-5 font-sans">MON – SUN</p>
             <h2 class="hours-title text-3xl md:text-4xl xl:text-[3.5rem] 2xl:text-6xl italic mb-8 md:mb-10">Open from Monday to Sunday</h2>
             ${buttonHtml}
@@ -111,8 +111,8 @@ function getMobileMenu(activePage) {
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="massages.html" class="${massagesActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Massages</a></li>
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="${giftHref}" class="${giftCardsActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">Gift cards</a></li>
                 <li class="mobile-menu-item border-b border-base-gold/20"><a href="${aboutHref}" class="${aboutUsActive} block py-5 px-8 text-base-text no-underline text-lg transition-colors duration-300 hover:bg-base-gray/30">About us</a></li>
-                <li class="mobile-menu-item mobile-menu-cta"><a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary block mt-8 mx-8 py-4 text-center bg-base-olive border border-base-olive text-white no-underline text-base italic font-serif rounded-full hover:bg-base-gold hover:border-base-gold">Book Now</a></li>
-                <li class="mobile-menu-item mobile-menu-cta"><a href="about-us.html#contact" class="btn-outlined block mt-4 mx-8 py-4 text-center bg-transparent border-2 border-base-tan text-base-tan no-underline text-base italic font-serif rounded-full hover:bg-base-tan hover:text-white hover:border-base-tan">Contact</a></li>
+                <li class="mobile-menu-item mobile-menu-cta"><a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary block mt-8 mx-6 py-5 text-center bg-base-olive border border-base-olive text-white no-underline text-base italic font-serif rounded-full hover:bg-base-gold hover:border-base-gold">Book Now</a></li>
+                <li class="mobile-menu-item mobile-menu-cta"><a href="about-us.html#contact" class="btn-outlined block mt-4 mx-6 py-5 text-center bg-transparent border-2 border-base-tan text-base-tan no-underline text-base italic font-serif rounded-full hover:bg-base-tan hover:text-white hover:border-base-tan">Contact</a></li>
             </ul>
         </div>
     </div>`;
@@ -148,7 +148,7 @@ function getNavbar(activePage) {
             <!-- Desktop: Logo on the left -->
             <div class="hidden md:flex items-center">
                 <a href="index.html">
-                    <img src="assets/logo_base_new_round.png" alt="Base Comfort" class="logo h-[70px] xl:h-[85px] 2xl:h-[100px] w-auto transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle" id="logoImg">
+                    <img src="assets/logo_base_new_round.png" alt="Base Comfort" class="logo h-[70px] xl:h-[85px] 2xl:h-[100px] custom:h-[110px] w-auto transition-opacity duration-300 object-contain bg-transparent mix-blend-multiply block align-middle" id="logoImg">
                 </a>
             </div>
 
@@ -173,7 +173,7 @@ function getNavbar(activePage) {
 
             <!-- Mobile: Book Now button only -->
             <div class="flex md:hidden items-center">
-                <a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary bg-base-olive border border-base-olive text-white py-2 px-4 text-[12px] leading-none rounded-[40px] italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold no-underline inline-flex items-center justify-center">Book Now</a>
+                <a href="https://basecomfortmassage.setmore.com" target="_blank" class="btn-primary bg-base-olive border border-base-olive text-white py-3 px-5 text-[13px] leading-tight rounded-[40px] italic font-serif cursor-pointer transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)] hover:bg-base-gold hover:border-base-gold no-underline inline-flex items-center justify-center">Book Now</a>
             </div>
 
             <!-- Desktop: Buttons on the right -->

@@ -268,8 +268,8 @@ body {
 
     /* Gift card section mobile adjustments - match sections 6 & 8 */
     .gift-card-section {
-        padding-top: 1.5rem !important;
-        padding-bottom: 5rem !important;
+        padding-top: 3.5rem !important;
+        padding-bottom: 5.3125rem !important;
         padding-left: 1.25rem !important;
         padding-right: 1.25rem !important;
     }
@@ -416,9 +416,18 @@ body {
     }
 
     /* Section vertical spacing adjustments */
-    .about-location {
-        padding-top: 5.3125rem !important; /* 85px */
-        padding-bottom: 5.3125rem !important; /* 85px */
+    @media (max-width: 767px) {
+        .about-location {
+            padding-top: 3rem !important; /* 48px */
+            padding-bottom: 3rem !important; /* 48px */
+        }
+    }
+
+    @media (min-width: 768px) {
+        .about-location {
+            padding-top: 5.3125rem !important; /* 85px */
+            padding-bottom: 5.3125rem !important; /* 85px */
+        }
     }
 
     .booking-section {
